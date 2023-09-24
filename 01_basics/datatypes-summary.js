@@ -25,4 +25,4 @@ const myFunction = function () {
   console.log("Hello, world");
 }; // typeof => function
 
-console.log(typeof myFunction);
+console.log(typeof anotherId);
