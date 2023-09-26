@@ -15,18 +15,18 @@ const dcHeroes = [
 ];
 
 marvelHeroes.push(dcHeroes);
-// console.log(marvelHeroes);
-// console.log(marvelHeroes[5][3]);
+console.log(marvelHeroes);
+console.log(marvelHeroes[5][3]);
 
-// const allHeroes = marvelHeroes.concat(dcHeroes);
-// console.log(allHeroes);
+const allHeroes = marvelHeroes.concat(dcHeroes);
+console.log(allHeroes);
 
-// const allNewHeroes = [...marvelHeroes, ...dcHeroes];
-// console.log(allNewHeroes);
+const allNewHeroes = [...marvelHeroes, ...dcHeroes];
+console.log(allNewHeroes);
 
-// const anotherArray = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]];
-// const realAnotherArray = anotherArray.flat(Infinity);
-// console.log(realAnotherArray);
+const anotherArray = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]];
+const realAnotherArray = anotherArray.flat(Infinity);
+console.log(realAnotherArray);
 
 console.log(Array.isArray("Ashutosh"));
 console.log(Array.from("Ashutosh"));
