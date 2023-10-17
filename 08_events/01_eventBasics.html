@@ -13,7 +13,7 @@
       <ul id="images">
         <li>
           <img
-            width="400px"
+            width="500px"
             id="japan"
             src="https://images.unsplash.com/photo-1542640244-7e672d6cef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
             alt="japan"
@@ -21,7 +21,7 @@
         </li>
         <li>
           <img
-            width="400px"
+            width="500px"
             id="river"
             src="https://images.unsplash.com/photo-1455577380025-4321f1e1dca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
             alt="river"
@@ -29,7 +29,7 @@
         </li>
         <li>
           <img
-            width="400px"
+            width="500px"
             id="elephant"
             src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80"
             alt="elephant"
@@ -37,7 +37,7 @@
         </li>
         <li>
           <img
-            width="400px"
+            width="500px"
             id="temple"
             src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
             alt="temple"
@@ -45,7 +45,7 @@
         </li>
         <li>
           <img
-            width="400px"
+            width="500px"
             id="car"
             src="https://images.unsplash.com/photo-1608341089966-92c09e62214f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
             alt="car"
@@ -72,19 +72,42 @@
 
     // type, timestamp, defaultPrevented, target, toElement, srcElement, currentTarget, clientX, clientY, screenX, screenY, altKey, ctrlKey, shiftKey, keyCode
 
-    document.getElementById("images").addEventListener(
-      "click",
-      function (e) {
-        console.log("clicked inside the ul");
-      },
-      false
-    );
+    // document.getElementById("images").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("clicked inside the ul");
+    //   },
+    //   false
+    // );
 
-    document.getElementById("japan").addEventListener(
+    // document.getElementById("japan").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("clicked japan");
+    //     e.stopPropagation();
+    //   },
+    //   false
+    // );
+
+    // document.getElementById("google").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log("google clicked");
+    //   },
+    //   false
+    // );
+
+    document.querySelector("#images").addEventListener(
       "click",
       function (e) {
-        console.log("clicked japan");
-        e.stopPropagation();
+        console.log(e.target.tagName);
+        if (e.target.tagName === "IMG") {
+          console.log(e.target.id);
+          let removeIt = e.target.parentNode;
+          removeIt.remove();
+        }
       },
       false
     );
