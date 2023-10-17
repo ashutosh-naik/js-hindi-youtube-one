@@ -8,7 +8,7 @@
     <title>HTML Events</title>
   </head>
   <body>
-    <h2>Amazing images</h2>
+    <h1>Amazing images</h1>
     <div>
       <ul id="images">
         <li>
@@ -61,5 +61,32 @@
     // document.getElementById("elephant").onclick = function () {
     //   alert("elephant clicked!");
     // };
+
+    // document.getElementById("japan").addEventListener(
+    //   "click",
+    //   function () {
+    //     alert("japan clicked");
+    //   },
+    //   false
+    // );
+
+    // type, timestamp, defaultPrevented, target, toElement, srcElement, currentTarget, clientX, clientY, screenX, screenY, altKey, ctrlKey, shiftKey, keyCode
+
+    document.getElementById("images").addEventListener(
+      "click",
+      function (e) {
+        console.log("clicked inside the ul");
+      },
+      false
+    );
+
+    document.getElementById("japan").addEventListener(
+      "click",
+      function (e) {
+        console.log("clicked japan");
+        e.stopPropagation();
+      },
+      false
+    );
   </script>
 </html>
