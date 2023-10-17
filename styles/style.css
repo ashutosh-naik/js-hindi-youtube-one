@@ -10,3 +10,8 @@ body {
   font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
   line-height: 1.4;
 }
+
+a {
+  color: #b6fffa;
+  text-decoration: none;
+}
